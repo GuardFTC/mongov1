@@ -1,0 +1,21 @@
+spring:
+  data:
+    mongodb:
+
+      #主数据源
+      primary:
+        address:
+          - 120.48.107.224:27017
+          - 120.48.107.224:27018
+        username: "java_test"
+        password: "java_test"
+        database: java_test
+
+      #备数据源
+      secondary:
+        address:
+          - 120.48.107.224:27017
+          - 120.48.107.224:27018
+        username: "java_test_bak"
+        password: "java_test_bak"
+        database: java_test_bak
