@@ -43,6 +43,12 @@
             <artifactId>hutool-all</artifactId>
             <version>5.8.4</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.12.10</version>
+        </dependency>
     </dependencies>
 
     <build>
