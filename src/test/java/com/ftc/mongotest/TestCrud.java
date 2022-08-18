@@ -233,7 +233,6 @@ public class TestCrud {
             Student student = new Student();
             student.setId(i);
             student.setName("ftc" + i);
-
             students.add(student);
         }
 
@@ -243,6 +242,10 @@ public class TestCrud {
         //4.正则查询校验
         Student result = primaryTemplate.findOne(new Query(Criteria.where("name").regex("1")), Student.class);
         Assert.isTrue("ftc1".equals(result.getName()));
+
+        //5.正则查询携带首选项校验
+        result = primaryTemplate.findOne(new Query(Criteria.where("name").regex("FTC2", "i")), Student.class);
+        Assert.isTrue("ftc2".equals(result.getName()));
     }
 
     @Autowired
